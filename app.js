@@ -71,6 +71,7 @@ fetch("https://external.iauro.com/stripe/create-payment-intent", {
     {handleActions: false}
   ).then(function(confirmResult) {
     console.log("success result", confirmResult)
+         ev.complete('success');
     if (confirmResult.error) {
       // Report to the browser that the payment failed, prompting it to
       // re-show the payment interface, or show an error message and close
