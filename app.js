@@ -90,7 +90,7 @@ fetch("https://external.iauro.com/stripe/create-payment-intent", {
             // The payment failed -- ask your customer for a new payment method.
             alert(" payment failed! use another payment method");
           } else {
-            alert("payment Success");
+//             alert("payment Success");
             // tr_id,amt,payment_method,time,status
       
 
@@ -119,28 +119,28 @@ fetch("https://external.iauro.com/stripe/create-payment-intent", {
 // shipping: null
 // source: null
 // status: "succeeded"
-            document.getElementById("payment_success_details").style.display= "block";
-            var milis = confirmResult.paymentIntent.created;
-            var date = new Date(milis);
-            var time = date.toString();
-            document.getElementById("tr_id").innerText = confirmResult.paymentIntent.id;
-            document.getElementById("amt").innerText = confirmResult.paymentIntent.amount;
-            document.getElementById("payment_method").innerText = confirmResult.paymentIntent.payment_method_types[0];
-            document.getElementById("time").innerText = time;
-            document.getElementById("status").innerText = confirmResult.paymentIntent.status;
+//             document.getElementById("payment_success_details").style.display= "block";
+//             var milis = confirmResult.paymentIntent.created;
+//             var date = new Date(milis);
+//             var time = date.toString();
+//             document.getElementById("tr_id").innerText = confirmResult.paymentIntent.id;
+//             document.getElementById("amt").innerText = confirmResult.paymentIntent.amount;
+//             document.getElementById("payment_method").innerText = confirmResult.paymentIntent.payment_method_types[0];
+//             document.getElementById("time").innerText = time;
+//             document.getElementById("status").innerText = confirmResult.paymentIntent.status;
           }
         });
       } else {
         // The payment has succeeded.
-        alert("payment successfull");
-        var milis = confirmResult.paymentIntent.created;
-        var date = new Date(milis);
-        var time = date.toString();
-        document.getElementById("tr_id").innerText = confirmResult.paymentIntent.id;
-        document.getElementById("amt").innerText = confirmResult.paymentIntent.amount;
-        document.getElementById("payment_method").innerText = confirmResult.paymentIntent.payment_method_types[0];
-        document.getElementById("time").innerText = time;
-        document.getElementById("status").innerText = confirmResult.paymentIntent.status;
+//         alert("payment successfull");
+//         var milis = confirmResult.paymentIntent.created;
+//         var date = new Date(milis);
+//         var time = date.toString();
+//         document.getElementById("tr_id").innerText = confirmResult.paymentIntent.id;
+//         document.getElementById("amt").innerText = confirmResult.paymentIntent.amount;
+//         document.getElementById("payment_method").innerText = confirmResult.paymentIntent.payment_method_types[0];
+//         document.getElementById("time").innerText = time;
+//         document.getElementById("status").innerText = confirmResult.paymentIntent.status;
       }
     }
   });
