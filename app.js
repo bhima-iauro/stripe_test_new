@@ -143,6 +143,7 @@ fetch("https://external.iauro.com/stripe/create-payment-intent", {
         var milis = confirmResult.paymentIntent.created;
         var date = new Date(milis);
         var time = date.toString();
+        document.getElementById("payment_success_details").style.display= "block";
         document.getElementById("tr_id").innerText = confirmResult.paymentIntent.id;
         document.getElementById("amt").innerText = confirmResult.paymentIntent.amount;
         document.getElementById("payment_method").innerText = confirmResult.paymentIntent.payment_method_types[0];
