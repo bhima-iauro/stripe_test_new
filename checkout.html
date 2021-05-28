@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy cool new product</title>
+    <link rel="stylesheet" href="style.css">
+   
+  </head>
+  <body>
+    <div class="container">
+    <section>
+      <div class="product">
+        <img
+          src="https://i.imgur.com/EHyR2nP.png"
+          alt="The cover of Stubborn Attachments"
+        />
+        <div class="description">
+          <h3>Stubborn Attachments</h3>
+          <h5>$20.00</h5>
+        </div>
+      </div>
+      <button type="button" id="checkout-button">Checkout with Card</button>
+      <br/>
+      <div class="instruction"><span></span></div>
+      <div id="payment-request-button" class="mybtn" onclick="hide_checkout()"></div>
+    </section>
+    </div>
+    <div class="payment_success_details" id="payment_success_details">
+      <h5>Transaction Details</h5>
+      <div class="details">
+        <div id="tr_id"></div>
+        <div id="amt"></div>
+        <div id="payment_method"></div>
+        <div id="time"></div>
+        <div id="status"></div>
+    
+      </div>
+    </div>
+    <!-- 
+
+      paymentIntent:
+amount: 100
+canceled_at: null
+cancellation_reason: null
+capture_method: "automatic"
+client_secret: "pi_1IvxlKSCDDhXqQs2SG5iSVsk_secret_aYYGyus99JJrjTdsgQNuV6nxx"
+confirmation_method: "automatic"
+created: 1622177854
+currency: "inr"
+description: null
+id: "pi_1IvxlKSCDDhXqQs2SG5iSVsk"
+last_payment_error: null
+livemode: false
+next_action: null
+object: "payment_intent"
+payment_method: "pm_1IvxlzSCDDhXqQs2D7zvb8NN"
+payment_method_types: Array(1)
+0: "card"
+length: 1
+__proto__: Array(0)
+receipt_email: null
+setup_future_usage: null
+shipping: null
+source: null
+status: "succeeded"
+     -->
+
+  </body>
+  <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="./app.js"></script>
+</html>
