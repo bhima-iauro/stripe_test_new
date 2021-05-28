@@ -22,7 +22,7 @@ var prButton = elements.create('paymentRequestButton', {
 // Check the availability of the Payment Request API first.
 paymentRequest.canMakePayment().then(function(result) {
   console.log("canMakePayment ", result);
-  if (result==null) {
+  if (result!=null) {
     // alert("canmakepayment");
    prButton.mount('#payment-request-button');
     // Replace the instruction.
